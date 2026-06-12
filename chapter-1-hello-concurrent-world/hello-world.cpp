@@ -2,7 +2,7 @@
 #include <thread>
 
 void hello() {
-    std::cout << "Hello Concurrent World\n";
+    std::cout << "Hello Concurrent World!\n";
 }
 
 int main() {
