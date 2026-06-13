@@ -15,6 +15,7 @@ struct func {
 int main() {
     int counter{0};
 
+    // The `counter` will be used after `main` finishes, but before the kernel terminates the thread
     std::thread t(func{counter});
 
     using namespace std::chrono_literals;
