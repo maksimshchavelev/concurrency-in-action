@@ -9,6 +9,7 @@ add_executable(background-task background-task.cpp)
 add_executable(dangling-reference dangling-reference.cpp)
 add_executable(join-exceptions join-exceptions.cpp)
 add_executable(arguments-ub arguments-ub.cpp)
+add_executable(method-call method-call.cpp)
 
 target_compile_options(dangling-reference PRIVATE -fsanitize=address,undefined -g)
 target_link_options(dangling-reference PRIVATE -fsanitize=address,undefined)
