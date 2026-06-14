@@ -11,9 +11,13 @@ add_executable(join-exceptions join-exceptions.cpp)
 add_executable(arguments-ub arguments-ub.cpp)
 add_executable(method-call method-call.cpp)
 add_executable(hardware-concurrency hardware-concurrency.cpp)
+add_executable(accumulate accumulate.cpp)
 
 target_compile_options(dangling-reference PRIVATE -fsanitize=address,undefined -g)
 target_link_options(dangling-reference PRIVATE -fsanitize=address,undefined)
 
 target_compile_options(arguments-ub PRIVATE -fsanitize=address,undefined -g)
 target_link_options(arguments-ub PRIVATE -fsanitize=address,undefined)
+
+target_compile_options(accumulate PRIVATE -fsanitize=address,undefined -g)
+target_link_options(accumulate PRIVATE -fsanitize=address,undefined)
