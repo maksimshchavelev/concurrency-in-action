@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(data-race data-race.cpp)
 add_executable(mutex mutex.cpp)
+add_executable(race-condition race-condition.cpp)
 
 target_compile_options(data-race PRIVATE -fsanitize=thread -g)
 target_link_options(data-race PRIVATE -fsanitize=thread)
