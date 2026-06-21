@@ -11,6 +11,7 @@ add_executable(lock lock.cpp)
 add_executable(deadlock-without-mutex deadlock-without-mutex.cpp)
 add_executable(hierarchical-mutex hierarchical-mutex.cpp)
 add_executable(unique-lock unique-lock.cpp)
+add_executable(call-once call-once.cpp)
 
 target_compile_options(data-race PRIVATE -fsanitize=thread -g)
 target_link_options(data-race PRIVATE -fsanitize=thread)
