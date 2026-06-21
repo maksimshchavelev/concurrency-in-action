@@ -7,6 +7,7 @@ add_executable(data-race data-race.cpp)
 add_executable(mutex mutex.cpp)
 add_executable(race-condition race-condition.cpp)
 add_executable(deadlock deadlock.cpp)
+add_executable(lock lock.cpp)
 
 target_compile_options(data-race PRIVATE -fsanitize=thread -g)
 target_link_options(data-race PRIVATE -fsanitize=thread)
