@@ -74,9 +74,7 @@ int main() {
     std::jthread t1([&]() { transfer(account1, account2, 200); });
     std::jthread t2([&]() { transfer(account2, account1, 300); });
 
-    // Thread 1 locks the account1 mutex, causing a delay; during this time, Thread 2 will definitely start and lock the account2
-    // mutex. Then, Thread 1 will attempt to lock the account2 mutex, but it is already locked by Thread 2. However, Thread 2
-    // cannot continue because the account1 mutex is locked by Thread 1. Deadlock!
+    // Since a deadlock will occur, an exception will be thrown and the program will crash.
 
     return 0;
 }
