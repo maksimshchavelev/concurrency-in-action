@@ -25,6 +25,7 @@ void foo() {
 }
 
 int main() {
+    // The resource will be initialized only once, but `print()` will be printed twice
     foo();
     foo();
 }
