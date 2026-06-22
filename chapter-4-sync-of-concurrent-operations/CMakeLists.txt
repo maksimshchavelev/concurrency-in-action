@@ -7,6 +7,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(condition-variable condition-variable.cpp)
 add_executable(thread-safe-queue thread-safe-queue.cpp)
-
-# target_compile_options(thread-safe-queue PRIVATE -fsanitize=thread)
-# target_link_libraries(thread-safe-queue PRIVATE -fsanitize=thread)
+add_executable(future future.cpp)
