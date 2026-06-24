@@ -14,8 +14,10 @@ int main() {
         try {
             throw std::runtime_error("BOOM! Something went wrong in the worker thread.");
         } catch (...) {
-            // std::current_exception() returns a smart pointer (exception_ptr) to the current “flying” exception object. The
-            // runtime determines where the exception object is located. By this point, the stack has already been unwound.
+            // `std::current_exception()` returns a smart pointer (`exception_ptr`) to the current "flying" exception object. The
+            // runtime determines where the exception object is located. By this point, the stack has already been unwound. In
+            // this case, `exception_ptr` is only accessible within the `catch` block.
+            // Alternatively, you can create an exception object using `std::make_exception_ptr`
             promise.set_exception(std::current_exception());
         }
     });
