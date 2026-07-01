@@ -13,5 +13,6 @@ add_executable(atomic-shared-ptr atomic-shared-ptr.cpp)
 add_executable(happens-before happens-before.cpp)
 add_executable(memory-order-relaxed memory-order-relaxed.cpp)
 add_executable(memory-order-release-acquire memory-order-release-acquire.cpp)
+add_executable(transitive-sync transitive-sync.cpp)
 
 target_link_libraries(my-type-with-atomic PRIVATE -latomic)
