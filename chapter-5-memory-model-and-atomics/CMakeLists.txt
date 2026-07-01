@@ -10,5 +10,6 @@ add_executable(atomic-flag atomic-flag.cpp)
 add_executable(spinlock-mutex spinlock-mutex.cpp)
 add_executable(my-type-with-atomic my-type-with-atomic.cpp)
 add_executable(atomic-shared-ptr atomic-shared-ptr.cpp)
+add_executable(happens-before happens-before.cpp)
 
 target_link_libraries(my-type-with-atomic PRIVATE -latomic)
